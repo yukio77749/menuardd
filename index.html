@@ -6,8 +6,14 @@
 <!-- AR.js ライブラリの読み込み -->
 <!-- <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script> -->
 <!-- <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script> -->
+ <!-- A-Frame本体 -->
+ <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+ <!-- AR.js -->
+ <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+ <!-- A-Frame内でリンクをつけるのに必要 -->
+ <script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
 
-<script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>
+<!-- <script src='https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script> -->
 
 <style>
   .arjs-loader {
@@ -34,7 +40,7 @@
 <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
 
 
-<script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script> 
+<!-- <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>  -->
 
 <body style='margin : 0px; overflow: hidden;'>
    <!-- minimal loader shown until image descriptors are loaded -->
@@ -59,17 +65,21 @@
             smoothTolerance='0.01'
             smoothThreshold='5'
           >
-          <a-box position="0 0.5 0" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara;"></a-box>
+          <!-- <a-box position="0 0.5 0" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara;"></a-box> -->
             <!-- <a-entity
                 gltf-model='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/yukio77749/menuardd/master/assets/model/test.gltf'
                 scale="50 50 50"
                 position="50 150 -100"
                 >
             </a-entity> -->
-            <a-box position="0 0.5 0" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara; image: #heart"></a-box>
+            <!-- <a-box position="0 0.5 0" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara; image: #heart"></a-box>
             <a-entity gltf-model="#heart" scale="0.5 0.5 0.5" position="0 1.8 0" rotation="0 0 0"
             link="href: https://qiita.com/nonkapibara; title: nonkapibara; image: #heart"
-            >
+            > -->
+            <a-entity
+            link="href: https://dais-official-site.web.app/; title: Official Site;"
+            position="0 .5 0"
+        ></a-entity>
         </a-nft>
 		<a-entity camera></a-entity>
     </a-scene>

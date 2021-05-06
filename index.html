@@ -42,6 +42,10 @@
         renderer="logarithmicDepthBuffer: true;"
         embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
 
+        <a-assets>
+            <a-asset-item id="heart" src="./assets/model/test.gltfb"></a-asset-item>
+        </a-assets>
+
         <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
         <a-nft
             type='nft'
@@ -52,12 +56,16 @@
             smoothThreshold='5'
           >
           <a-box position="0 0.5 0" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara;"></a-box>
-            <a-entity
+            <!-- <a-entity
                 gltf-model='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/yukio77749/menuardd/master/assets/model/test.gltf'
                 scale="50 50 50"
                 position="50 150 -100"
                 >
-            </a-entity>
+            </a-entity> -->
+            <a-box position="0 0.5 0" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara; image: #heart"></a-box>
+            <a-entity gltf-model="#heart" scale="0.5 0.5 0.5" position="0 1.8 0" rotation="0 0 0"
+            link="href: https://qiita.com/nonkapibara; title: nonkapibara; image: #heart"
+            >
         </a-nft>
 		<a-entity camera></a-entity>
     </a-scene>

@@ -18,7 +18,7 @@
 
 
 <!-- <script src="https://unpkg.com/aframe-simple-link-component/dist/aframe-simple-link-component.min.js"></script>  -->
-<script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
+<!-- <script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script> -->
 
 <style>
   .arjs-loader {
@@ -61,6 +61,7 @@
             <a-asset-item id="heart" src="./assets/model/test.gltf"></a-asset-item>
         </a-assets>
 
+        <a-box position="0 0.5 0" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara;"></a-box>
         <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
         <a-nft
             type='nft'

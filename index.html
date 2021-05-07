@@ -55,7 +55,9 @@
     <a-scene
         vr-mode-ui='enabled: false;'
         renderer="logarithmicDepthBuffer: true;"
-        embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
+        embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'
+        cursor="fuse: false; rayOrigin: mouse"
+        >
 
         <a-assets>
             <a-asset-item id="heart" src="./assets/model/test.gltf"></a-asset-item>
@@ -80,12 +82,12 @@
                 
                 >
             </a-entity> -->
-            <a-entity
+            <!-- <a-entity
         link="href: https://github.com/dai-570415; title: Git Hub;"
         position="0 .5 0"
         scale="50 50 50"
-      ></a-entity>
-      <a-box position="0 0.5 0" scale="50 50 50" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara;"></a-box>
+      ></a-entity> -->
+      <a-box camera-listener position="0 5 -5" scale="80 80 80" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara;"></a-box>
             <!-- link="href: https://aframe.io/; title: nonkapibara;" -->
             <!-- <a-box position="0 0.5 0" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara; image: #heart"></a-box>
             <a-entity gltf-model="#heart" scale="0.5 0.5 0.5" position="0 1.8 0" rotation="0 0 0"
@@ -96,26 +98,27 @@
             position="0 .5 0"
         ></a-entity> -->
         </a-nft>
-		<a-entity camera>
+	
       <!-- <a-cursor></a-cursor> -->
       <!--  fuseTimeout: 100 -->
-      <a-entity cursor="fuse: true;"></a-entity>
+      <a-entity camera>
+      <!-- <a-entity cursor="fuse: true;"></a-entity> -->
     </a-entity>
-    <p>更新2020.10.7 18:20</p>
+    <!-- <p>更新2020.10.7 18:20</p> -->
     </a-scene>
 
     <script>
     
-      // AFRAME.registerComponent('camera-listener', {
-      //   init: function () {
-      //     this.el.addEventListener('click', function () {
-      //       // window.location.href = 'パス名'; // 通常の遷移
-      //       // window.open('https://aframe.io/', '_blank');
-      //       alert('click');
-      //       window.location.href = 'https://aframe.io/';
-      //     });
-      //   }
-      // });
+      AFRAME.registerComponent('camera-listener', {
+        init: function () {
+          this.el.addEventListener('click', function () {
+            // window.location.href = 'パス名'; // 通常の遷移
+            // window.open('https://aframe.io/', '_blank');
+            // alert('click');
+            window.location.href = 'https://aframe.io/';
+          });
+        }
+      });
     </script>
 </body>
 

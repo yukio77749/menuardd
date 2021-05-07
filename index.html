@@ -56,8 +56,9 @@
         vr-mode-ui='enabled: false;'
         renderer="logarithmicDepthBuffer: true;"
         embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'
-        cursor="fuse: false; rayOrigin: mouse"
+    
         >
+        <!-- fuseTimeout: 100 -->
 
         <a-assets>
             <a-asset-item id="heart" src="./assets/model/test.gltf"></a-asset-item>
@@ -73,7 +74,7 @@
             smoothTolerance='0.01'
             smoothThreshold='5'
           >
-          <a-box position="0 0.5 0" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara;"></a-box>
+          <!-- <a-box position="0 0.5 0" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara;"></a-box> -->
             <!-- <a-entity
                 camera-listener
                 gltf-model='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/yukio77749/menuardd/master/assets/model/test.gltf'
@@ -87,7 +88,7 @@
         position="0 .5 0"
         scale="50 50 50"
       ></a-entity> -->
-      <a-box camera-listener position="0 5 -5" scale="80 80 80" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara;"></a-box>
+      <a-box camera-listener position="0 5 -25" scale="80 80 80" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara;"></a-box>
             <!-- link="href: https://aframe.io/; title: nonkapibara;" -->
             <!-- <a-box position="0 0.5 0" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara; image: #heart"></a-box>
             <a-entity gltf-model="#heart" scale="0.5 0.5 0.5" position="0 1.8 0" rotation="0 0 0"
@@ -102,9 +103,9 @@
       <!-- <a-cursor></a-cursor> -->
       <!--  fuseTimeout: 100 -->
       <a-entity camera>
-      <!-- <a-entity cursor="fuse: true;"></a-entity> -->
-    </a-entity>
-    <!-- <p>更新2020.10.7 18:20</p> -->
+         <a-entity cursor="fuse: true; fuseTimeout: 100"></a-entity>
+     </a-entity>
+    <p style="color:red;">更新2020.10.7 18:20</p>
     </a-scene>
 
     <script>
@@ -114,7 +115,7 @@
           this.el.addEventListener('click', function () {
             // window.location.href = 'パス名'; // 通常の遷移
             // window.open('https://aframe.io/', '_blank');
-            // alert('click');
+            alert('click');
             window.location.href = 'https://aframe.io/';
           });
         }

@@ -88,7 +88,7 @@
         position="0 .5 0"
         scale="50 50 50"
       ></a-entity> -->
-      <a-box camera-listener position="0 0 -20" scale="100 100 100" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara;"></a-box>
+      <a-box camera-listener position="0 0 -100" scale="100 100 100" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara;"></a-box>
             <!-- link="href: https://aframe.io/; title: nonkapibara;" -->
             <!-- <a-box position="0 0.5 0" wireframe="true" link="href: https://qiita.com/nonkapibara; title: nonkapibara; image: #heart"></a-box>
             <a-entity gltf-model="#heart" scale="0.5 0.5 0.5" position="0 1.8 0" rotation="0 0 0"
@@ -115,6 +115,12 @@
       AFRAME.registerComponent('camera-listener', {
         init: function () {
           this.el.addEventListener('click', function () {
+            // window.location.href = 'パス名'; // 通常の遷移
+            // window.open('https://aframe.io/', '_blank');
+            alert('click');
+            window.location.href = 'https://aframe.io/';
+          });
+          this.el.addEventListener('mouseleave', function () {
             // window.location.href = 'パス名'; // 通常の遷移
             // window.open('https://aframe.io/', '_blank');
             alert('click');
